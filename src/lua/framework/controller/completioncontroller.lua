@@ -44,16 +44,9 @@ local function fetch_cmp_sources()
       name = "nvim_lsp",
       max_item_count = 20,
       priority_weight = 100,
-      entry_filter = function(entry, ctx)
-        -- fifteen = snippet, 23 = event
-        if entry:get_kind() == 23 or entry:get_kind() == 15 then
-          return false
-        end
-        return true
-      end,
     },
     { name = "nvim_lua", priority_weight = 90 },
-    { name = "luasnip", priority_weight = 80 },
+    { name = "luasnip", priority_weight = 115 },
     {
       name = "buffer",
       max_item_count = 5,
